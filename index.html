@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matthew's Website</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trail Finder</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
-
 <body>
-  <div class="navbar">
-    <a href="#">Logo</a>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-  <h1>Welcome to My Web Page</h1>
-  <p id="message">This is a sample paragraph.</p>
+  <header class="site-header">
+    <nav class="navbar">
+      <h1>Trail Finder</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trails">Trails</a></li>
+        <li><a href="#finder">Finder</a></li>
+      </ul>
+    </nav>
 
-  <!-- Link to the external JavaScript file -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Find your next outdoor adventure</h2>
+        <p>
+          Trail Finder helps you choose a hiking trail based on your experience,
+          mood, and available time.
+        </p>
+        <a href="#finder" class="button">Try the Trail Finder</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>About This Website</h2>
+      <p>
+        This sample website was created to show organized HTML structure,
+        responsive CSS design, and JavaScript logic that responds to user input.
+      </p>
+    </section>
+
+    <section id="trails" class="section">
+      <h2>Popular Trail Types</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Forest trail" />
+          <h3>Forest Walk</h3>
+          <p>
+            A peaceful trail surrounded by trees. Great for beginners or anyone
+            looking for a relaxing outdoor experience.
+          </p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Mountain landscape" />
+          <h3>Mountain Hike</h3>
+          <p>
+            A more challenging hike with elevation, views, and a stronger sense
+            of adventure.
+          </p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Lake view" />
+          <h3>Lake Loop</h3>
+          <p>
+            A scenic loop near water. Perfect for photos, fresh air, and a calm
+            day outside.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="finder" class="section finder-section">
+      <h2>Trail Recommendation Tool</h2>
+      <p>
+        Choose your hiking experience level and how much time you have. The
+        website will recommend a trail type for you.
+      </p>
+
+      <div class="form-card">
+        <label for="experience">Experience Level</label>
+        <select id="experience">
+          <option value="">Select one</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+
+        <label for="time">Available Time</label>
+        <select id="time">
+          <option value="">Select one</option>
+          <option value="short">Less than 1 hour</option>
+          <option value="medium">1 to 3 hours</option>
+          <option value="long">More than 3 hours</option>
+        </select>
+
+        <button id="recommendButton">Get Recommendation</button>
+
+        <div id="result" class="result-box">
+          Your recommendation will appear here.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for my sample website project.</p>
+  </footer>
+
   <script src="script.js"></script>
-
-  <div class="grid-container">
-    <div class="grid-item">Item 1</div>
-    <div class="grid-item">Item 2</div>
-    <div class="grid-item">Item 3</div>
-    <div class="grid-item">Item 4</div>
-    <div class="grid-item">Item 5</div>
-    <div class="grid-item">Item 6</div>
-  </div>
 </body>
-
 </html>

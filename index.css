@@ -1,40 +1,237 @@
-h1 {
-  color: teal;
-  font-size: 32px;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Grid container */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  grid-gap: 20px; /* Space between grid items */
-  padding: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7f2;
+  color: #1f2d1f;
+  line-height: 1.6;
 }
 
-/* Grid items */
-.grid-item {
-  background-color: #ddd;
-  padding: 20px;
-  text-align: center;
+.site-header {
+  background: linear-gradient(rgba(20, 45, 25, 0.65), rgba(20, 45, 25, 0.65)),
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 70vh;
 }
 
-/* Flex container */
 .navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
   display: flex;
-  background-color: #333;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Align items and distribute space */
-.navbar {
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Vertically center items */
+.navbar h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
-/* Flex items */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 28px;
+}
+
+.button,
+button {
+  display: inline-block;
+  background-color: #d98c3f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover,
+button:hover {
+  background-color: #b96f2a;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.section h2 {
+  color: #254d2a;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.section p {
+  font-size: 1.05rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  color: #254d2a;
+  font-size: 1.35rem;
+  margin: 18px 18px 8px;
+}
+
+.card p {
+  margin: 0 18px 22px;
+}
+
+.finder-section {
+  background-color: #e8efe4;
+  border-radius: 24px;
+  margin-bottom: 50px;
+}
+
+.form-card {
+  background-color: white;
+  padding: 28px;
+  margin-top: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  max-width: 550px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #254d2a;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bfd1b9;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+button {
+  margin-top: 24px;
+}
+
+.result-box {
+  margin-top: 24px;
+  padding: 18px;
+  background-color: #f4f7f2;
+  border-left: 6px solid #d98c3f;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 28px;
+  background-color: #254d2a;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 60px 24px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 48px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
 }
